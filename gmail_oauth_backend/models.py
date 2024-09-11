@@ -8,7 +8,7 @@ class RefreshToken(models.Model):
     updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.value
+        return self.value.get('refresh_token', '-')
 
     class Meta:
         verbose_name = 'Gmail OAuth Refresh Token'

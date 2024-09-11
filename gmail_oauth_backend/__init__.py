@@ -24,7 +24,7 @@ class GmailOauthBackend(BaseEmailBackend):
 
         try:
             from gmail_oauth_backend.models import RefreshToken
-            self.refresh_token = RefreshToken.objects.get(key='PyLab').value
+            self.refresh_token = RefreshToken.objects.get(key='PyLab').value['refresh_token']
         except Exception:
             raise ValueError('Refresh Token does not exist in the database. Please run the "init_gmail_oauth_token" management command to obtain a refresh token.')
 

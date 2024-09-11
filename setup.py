@@ -24,7 +24,7 @@ elif sys.argv[-1] == "clean":
 
 setup(
     name='django-gmail-oauth-backend',
-    version='0.1.1',
+    version='0.1.7',
     description='Simplifies Gmail authentication for Django applications using OAuth 2.0. WITHOUT App Passwords!',
     long_description=long_description,
     long_description_content_type='text/markdown',
