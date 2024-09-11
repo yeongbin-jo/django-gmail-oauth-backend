@@ -3,12 +3,12 @@ from django.db import models
 
 class RefreshToken(models.Model):
     key = models.CharField(max_length=5, unique=True, primary_key=True)
-    value = models.JSONField()
+    value = models.CharField(max_length=200)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.value.get('refresh_token', '-')
+        return self.value
 
     class Meta:
         verbose_name = 'Gmail OAuth Refresh Token'

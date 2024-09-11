@@ -42,7 +42,7 @@ class Command(BaseCommand):
                 from gmail_oauth_backend.models import RefreshToken
                 RefreshToken.objects.update_or_create(
                     key='PyLab',
-                    defaults={'value': json.loads(creds.to_json())}
+                    defaults={'value': creds.refresh_token}
                 )
             except Exception as e:
                 self.stderr.write(self.style.ERROR(f'Can not save Refresh Token to database: {e}'))
