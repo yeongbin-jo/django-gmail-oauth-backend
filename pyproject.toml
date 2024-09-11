@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "django-gmail-oauth-backend"
+version = "0.1.0"
+description = ""
+authors = ["CHIDA <iam.yeongbin.jo@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^5.1.1"
+google-api-python-client = "^2.145.0"
+google-auth = "^2.34.0"
+google-auth-oauthlib = "^1.2.1"
+
+
+[tool.poetry.group.dev.dependencies]
+twine = "^5.1.1"
+setuptools = "^74.1.2"
+wheel = "^0.44.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
